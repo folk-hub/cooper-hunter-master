@@ -42,8 +42,8 @@ export function SiteHeader() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
-            <nav className="flex flex-col items-center gap-4 mt-8">
+          <SheetContent side="right" className="flex items-center justify-center">
+            <nav className="flex flex-col items-center gap-4">
               {navigation.menuItems.map((item) => (
                 <Link
                   key={item.href}
