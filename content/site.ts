@@ -27,6 +27,7 @@ export const footer: Footer = {
       { label: "Produkter", href: "/produkter" },
       { label: "Om oss", href: "/om" },
       { label: "Sparekalkulator", href: "/sparekalkulator" },
+      { label: "Personvern", href: "/personvern" },
     ],
   },
   copyright: "Varmepumpeservice AS. Alle rettigheter reservert.",
