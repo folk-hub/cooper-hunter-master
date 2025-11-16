@@ -7,7 +7,7 @@ import type { Product } from "./types"
 export const products: Product[] = [
   {
     id: "arctic",
-    name: "Cooper&Hunter Arctic",
+    name: "Cooper&Hunter Arctic 12",
     description: "Høy effektivitet – SCOP 4.1",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
@@ -19,10 +19,10 @@ export const products: Product[] = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-fjernkontroll-gqKNqaNB5aBirkKVz5roxr5JwHh0Wu.jpg", // cooper-hunter-fjernkontroll.jpg
     ],
     detailPage: {
-      title: "Cooper&Hunter Arctic",
+      title: "Cooper&Hunter Arctic 12",
       subtitle: "Høy effektivitet – SCOP 4.1",
       description:
-        "Cooper&Hunter Arctic er en høyeffektiv varmepumpe designet for de kaldeste klimaene. Med en SCOP på 4.1 og evnen til å varme ned til -25°C, er dette det perfekte valget for norske forhold.",
+        "Cooper&Hunter Arctic 12 er en høyeffektiv varmepumpe designet for de kaldeste klimaene. Med en SCOP på 4.1 og evnen til å varme ned til -25°C, er dette det perfekte valget for norske forhold.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
@@ -63,11 +63,119 @@ export const products: Product[] = [
     },
   },
   {
+    id: "arctic-18",
+    name: "Cooper&Hunter Arctic 18",
+    description: "Høy effektivitet – SCOP 4.2",
+    scop: "SCOP 4.2",
+    features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
+    price: "Kontakt forhandler for pris",
+    images: [
+      "/cp-arctic18.webp",
+    ],
+    detailPage: {
+      title: "Cooper&Hunter Arctic 18",
+      subtitle: "høy effektivitet – SCOP 4.2",
+      description:
+        "Cooper&Hunter Arctic 18 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 18 deg optimal komfort og minimal strømregning.",
+      backButton: "Tilbake til produkter",
+      downloadButton: "Last ned produktark",
+      downloadUrl: "/produktark/produktark_KIT-Arctic18.pdf",
+      findDealerButton: "Finn forhandler",
+      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      specifications: {
+        title: "Tekniske spesifikasjoner",
+        items: [
+          { label: "SCOP", value: "4.2" },
+          { label: "Energiklasse", value: "A+" },
+          { label: "Varmekapasitet", value: "1.10 - 6.60 kW" },
+          { label: "Kjølekapasitet", value: "1.00 - 6.10 kW" },
+          { label: "Støynivå innedel", value: "24-45 dB(A)" },
+          { label: "Støynivå utedel", value: "56 dB(A)" },
+        ],
+      },
+      keyFeatures: {
+        title: "Nøkkelfunksjoner",
+        items: [
+          {
+            title: "Fabrikkgarantert varmekapasitet ned til -25 C",
+            description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
+          },
+          {
+            title: "Integrert WiFi",
+            description: "Styr varmepumpen fra mobilen din hvor som helst",
+          },
+          {
+            title: "Energiklasse A+",
+            description: "Ledende energieffektivitet for lavest mulig strømforbruk",
+          },
+          {
+            title: "Premium design",
+            description: "Elegant og moderne design som passer perfekt inn i ethvert hjem",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "arctic-24",
+    name: "Cooper&Hunter Arctic 24",
+    description: "Høy effektivitet – SCOP 4.2",
+    scop: "SCOP 4.2",
+    features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
+    price: "Kontakt forhandler for pris",
+    images: [
+      "/cp-arctic24.webp",
+    ],
+    detailPage: {
+      title: "Cooper&Hunter Arctic 24",
+      subtitle: "høy effektivitet – SCOP 4.2",
+      description:
+        "Cooper&Hunter Arctic 24 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 24 deg optimal komfort og minimal strømregning.",
+      backButton: "Tilbake til produkter",
+      downloadButton: "Last ned produktark",
+      downloadUrl: "/produktark/produktark_KIT-Arctic24.pdf",
+      findDealerButton: "Finn forhandler",
+      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      specifications: {
+        title: "Tekniske spesifikasjoner",
+        items: [
+          { label: "SCOP", value: "4.2" },
+          { label: "Energiklasse", value: "A+" },
+          { label: "Varmekapasitet", value: "1.80 - 9.45 kW" },
+          { label: "Kjølekapasitet", value: "2.00 - 8.85 kW" },
+          { label: "Støynivå innedel", value: "27-47 dB(A)" },
+          { label: "Støynivå utedel", value: "59 dB(A)" },
+        ],
+      },
+      keyFeatures: {
+        title: "Nøkkelfunksjoner",
+        items: [
+          {
+            title: "Fabrikkgarantert varmekapasitet ned til -25 C",
+            description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
+          },
+          {
+            title: "Integrert WiFi",
+            description: "Styr varmepumpen fra mobilen din hvor som helst",
+          },
+          {
+            title: "Energiklasse A+",
+            description: "Ledende energieffektivitet for lavest mulig strømforbruk",
+          },
+          {
+            title: "Premium design",
+            description: "Elegant og moderne design som passer perfekt inn i ethvert hjem",
+          },
+        ],
+      },
+    },
+  },
+  {
     id: "daytona",
     name: "Cooper&Hunter Daytona",
     description: "Høy effektivitet – SCOP 4.1",
     scop: "SCOP 4.1",
-    features: ["varmedrift ned til -25", "Integrert WiFi", "Energiklasse A+"],
+    features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Daytona-Grafitt-hvit-yc38JL8CrvJ3Txnfm9733jTs8D6wJZ.jpg", // Updated first carousel image to show both white and graphite variants

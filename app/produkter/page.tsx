@@ -11,8 +11,22 @@ import { siteContent } from "@/content"
 export default function ProductsPage() {
   const handleDownload = (productId: string) => {
     const link = document.createElement("a")
-    link.href = `/produktark/${productId}-produktark.pdf`
-    link.download = `Cooper&Hunter ${productId.charAt(0).toUpperCase() + productId.slice(1)}-produktark.pdf`
+    let pdfPath = ""
+    let fileName = ""
+
+    if (productId === "arctic-18") {
+      pdfPath = "/produktark/produktark_KIT-Arctic18.pdf"
+      fileName = "Cooper&Hunter Arctic 18-produktark.pdf"
+    } else if (productId === "arctic-24") {
+      pdfPath = "/produktark/produktark_KIT-Arctic24.pdf"
+      fileName = "Cooper&Hunter Arctic 24-produktark.pdf"
+    } else {
+      pdfPath = `/produktark/${productId}-produktark.pdf`
+      fileName = `Cooper&Hunter ${productId.charAt(0).toUpperCase() + productId.slice(1)}-produktark.pdf`
+    }
+
+    link.href = pdfPath
+    link.download = fileName
     link.click()
   }
 
@@ -83,7 +97,7 @@ export default function ProductsPage() {
                           </Link>
                         </Button>
 
-                        {(product.id === "arctic" || product.id === "daytona") && (
+                        {(product.id === "arctic" || product.id === "daytona" || product.id === "arctic-18" || product.id === "arctic-24") && (
                           <Button
                             size="lg"
                             className="bg-blue-900 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
