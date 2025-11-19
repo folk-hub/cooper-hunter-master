@@ -35,23 +35,11 @@ export default function RootLayout({
   return (
     <html lang="no">
       <head>
-        {/* Cookiebot - Must load before GTM (production only) */}
+        {/* Google Tag Manager (production only) - GTM handles Cookiebot */}
         {isProduction && (
-          <script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid="bd34d6b6-1bc8-4342-ac95-f787c20eb924"
-            data-blockingmode="auto"
-            type="text/javascript"
-          />
-        )}
-
-        {/* Google Tag Manager - Controlled by Cookiebot (production only) */}
-        {isProduction && (
-          <script
+          <Script
             id="gtm-script"
-            data-cookieconsent="statistics"
-            type="text/plain"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
                 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,7 +53,7 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${roboto.variable} font-sans`}>
-        {/* Google Tag Manager (noscript) - Controlled by Cookiebot (production only) */}
+        {/* Google Tag Manager (noscript) (production only) */}
         {isProduction && (
           <noscript>
             <iframe
@@ -73,7 +61,6 @@ export default function RootLayout({
               height="0"
               width="0"
               style={{display: 'none', visibility: 'hidden'}}
-              data-cookieconsent="statistics"
             />
           </noscript>
         )}
