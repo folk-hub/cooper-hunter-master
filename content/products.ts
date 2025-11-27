@@ -69,9 +69,7 @@ export const products: Product[] = [
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
-    images: [
-      "/cp-arctic18.webp",
-    ],
+    images: ["/cp-arctic18.webp"],
     detailPage: {
       title: "Cooper&Hunter Arctic 18",
       subtitle: "høy effektivitet – SCOP 4.2",
@@ -123,9 +121,7 @@ export const products: Product[] = [
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
-    images: [
-      "/cp-arctic24.webp",
-    ],
+    images: ["/cp-arctic24.webp"],
     detailPage: {
       title: "Cooper&Hunter Arctic 24",
       subtitle: "høy effektivitet – SCOP 4.2",

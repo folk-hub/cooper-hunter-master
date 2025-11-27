@@ -6,11 +6,17 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 interface ProductCarouselProps {
   images: string[]
   alt: string
+  fit?: "contain" | "cover"
+  aspect?: string
+  captions?: string[]
 }
 
-export function ProductCarousel({ images, alt }: ProductCarouselProps) {
+export function ProductCarousel({ images, alt, fit = "contain", aspect, captions }: ProductCarouselProps) {
   const [api, setApi] = React.useState<any>()
   const [current, setCurrent] = React.useState(0)
+  const aspectClass = aspect || "aspect-[4/3]"
+  const paddingClass = fit === "cover" ? "p-0" : "p-8"
+  const objectFitClass = fit === "cover" ? "object-cover" : "object-contain"
 
   React.useEffect(() => {
     if (!api) {
@@ -30,12 +36,24 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="aspect-[4/3] overflow-hidden rounded-t-lg p-8 bg-transparent">
+              <div
+                className={`${aspectClass} overflow-hidden rounded-t-lg ${paddingClass} bg-transparent ${
+                  captions ? "group relative" : ""
+                }`}
+              >
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`${alt} - ${index + 1}`}
-                  className="object-contain w-full h-full"
+                  className={`${objectFitClass} w-full h-full`}
                 />
+                {captions && captions[index] ? (
+                  <>
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-90" />
+                    <div className="pointer-events-none absolute inset-0 flex items-end opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                      <div className="w-full p-4 text-white text-base font-semibold">{captions[index]}</div>
+                    </div>
+                  </>
+                ) : null}
               </div>
             </CarouselItem>
           ))}

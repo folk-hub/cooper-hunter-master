@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ProductCarousel } from "@/components/product-carousel"
+import { RoomCarousel } from "@/components/room-carousel"
 import { siteContent } from "@/content"
 
 export default function HomePage() {
@@ -88,6 +89,30 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Room inspiration Section */}
+        <section className="pt-14 pb-2 md:pt-18 md:pb-4">
+          <div className="container px-4 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                Passer perfekt i flere rom og på hytta
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Cooper &amp; Hunter varmepumper gir komfort der du trenger det: stue, hjemmekontor, treningsrom,
+                soverom eller fritidsbolig. Stilrent design og stille drift gjør dem enkle å plassere.
+              </p>
+            </div>
+            <RoomCarousel
+              items={[
+                { src: "/images/arctic-kontor-sommer.webp", alt: "Hjemmekontor med varmepumpe", label: "Hjemmekontoret" },
+                { src: "/images/daytona-soverom-sommer.webp", alt: "Soverom med varmepumpe", label: "Soverommet" },
+                { src: "/images/daytona-skandinavisk-sommer.webp", alt: "Stue i skandinavisk stil med varmepumpe", label: "Stuen" },
+                { src: "/images/treningsrom-daytona.webp", alt: "Moderne treningsrom med varmepumpe", label: "Hjemmegym" },
+                { src: "/images/daytona-vinter-hytte.webp", alt: "Hytte med varmepumpe om vinteren", label: "Hytta" },
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Products Section */}
         <section className="md:py-0 my-0 mb-0 py-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-20 mb-8">
@@ -96,14 +121,14 @@ export default function HomePage() {
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{homepage.productsSection.description}</p>
             </div>
 
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               {products.map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow p-0 relative">
                   <Badge variant="secondary" className="absolute top-4 left-4 z-10">
                     {product.scop}
                   </Badge>
                   {product.images ? (
-                    <ProductCarousel images={product.images} alt={product.name} />
+                    <ProductCarousel images={product.images} alt={product.name} fit="cover" />
                   ) : (
                     <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                       <img
@@ -146,7 +171,7 @@ export default function HomePage() {
           <div className="container px-4 sm:px-6 mb-8">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
               <img
-                src="/images/design-mode/2025.01.01.jpg"
+                src="/images/daytona-soverom-vinter.webp"
                 alt="Perfekt inneklima"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -190,7 +215,7 @@ export default function HomePage() {
           <div className="container px-4 sm:px-6">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
               <img
-                src="/images/design-mode/cooper-hunter-design.webp"
+                src="/images/yoga.webp"
                 alt="Dokumentert effekt"
                 className="absolute inset-0 w-full h-full object-cover"
               />
