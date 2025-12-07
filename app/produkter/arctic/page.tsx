@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Download, Wifi, Zap, Gauge, ThermometerSnowflake } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -132,11 +133,13 @@ export default function ArcticPage() {
 
         <section className="pb-12 md:pb-16">
           <div className="container">
-            <div className="relative overflow-hidden rounded-3xl">
-              <img
+            <div className="relative overflow-hidden rounded-3xl h-[320px] md:h-[420px]">
+              <Image
                 src="/images/arctic-vinter.webp"
                 alt={`${product.name} i vinterdrift`}
-                className="h-[320px] w-full object-cover md:h-[420px]"
+                fill
+                sizes="100vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40" />
               <div className="absolute inset-0 flex items-center">
