@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { Download, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -58,10 +59,12 @@ export default function ProductsPage() {
                     {/* Image */}
                     <div className={`${isEven ? "" : "md:col-start-2"}`}>
                       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
-                        <img
+                        <Image
                           src={productImage || "/placeholder.svg"}
                           alt={product.name}
-                          className="object-cover w-full h-full"
+                          fill
+                          sizes="(min-width: 1280px) 40vw, (min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
                         />
                       </div>
                     </div>

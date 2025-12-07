@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Building2, Users, TrendingUp, Award, MapPin, Phone, Mail } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
@@ -80,11 +81,13 @@ export default function AboutPage() {
               </div>
 
               <div className="space-y-6">
-                <div className="overflow-hidden rounded-lg">
-                  <img
+                <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                  <Image
                     src="/images/design-mode/Skandinavisk-sommer.webp"
                     alt="Cooper & Hunter varmepumpe i moderne skandinavisk stue med utsikt over norsk natur"
-                    className="object-cover w-full h-full"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
               </div>

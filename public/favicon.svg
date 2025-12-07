@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cooper & Hunter">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b4ba3"/>
+      <stop offset="100%" stop-color="#1f9bd0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <path d="M17 21c-4 0-7 3.2-7 8.5V34c0 5.3 3 8.5 7 8.5h10v-5.2H18c-2 0-3.3-1.5-3.3-4v-3.4c0-2.5 1.3-4 3.3-4h9V21H17Zm30 0-8.5 21.5h6.6l1.4-3.9h8l1.4 3.9H63L54.5 21H47Zm4.6 5.6h.2l2.4 7.5h-5.1l2.5-7.5Z" fill="#f7fbff"/>
+</svg>

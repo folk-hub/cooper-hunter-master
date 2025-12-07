@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description:
     "Høykvalitets varmepumper fra Cooper&Hunter. Lav kostnad, høy klasse. Distribuert av Varmepumpeservice AS - en av Norges ledende leverandører.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({

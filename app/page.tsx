@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Snowflake, Zap, Shield, TrendingDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -21,10 +22,13 @@ export default function HomePage() {
         <section className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center justify-center">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src="/images/design-mode/c-huntersofa.webp"
               alt="Cooper&Hunter varmepumpe i moderne stue"
-              className="object-cover w-full h-full"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
             {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-transparent" />
@@ -130,11 +134,13 @@ export default function HomePage() {
                   {product.images ? (
                     <ProductCarousel images={product.images} alt={product.name} fit="cover" />
                   ) : (
-                    <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
-                      <img
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-t-lg">
+                      <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
-                        className="object-cover w-full h-full"
+                        fill
+                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
                       />
                     </div>
                   )}
@@ -170,10 +176,12 @@ export default function HomePage() {
         <section className="py-0 md:py-20">
           <div className="container px-4 sm:px-6 mb-8">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-              <img
+              <Image
                 src="/images/daytona-soverom-vinter.webp"
                 alt="Perfekt inneklima"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                sizes="100vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(0,0,0,0.23)]" />
               <div className="relative z-10 text-center text-white py-12 px-6">
@@ -214,10 +222,12 @@ export default function HomePage() {
         <section className="py-8 md:py-20">
           <div className="container px-4 sm:px-6">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-              <img
+              <Image
                 src="/images/yoga.webp"
                 alt="Dokumentert effekt"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                sizes="100vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(0,0,0,0.25)]" />
               <div className="relative z-10 text-center text-white py-12 px-6">

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import * as React from "react"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
@@ -37,13 +38,15 @@ export function ProductCarousel({ images, alt, fit = "contain", aspect, captions
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <div
-                className={`${aspectClass} overflow-hidden rounded-t-lg ${paddingClass} bg-transparent ${
-                  captions ? "group relative" : ""
+                className={`${aspectClass} relative overflow-hidden rounded-t-lg bg-transparent ${paddingClass} ${
+                  captions ? "group" : ""
                 }`}
               >
-                <img
+                <Image
                   src={image || "/placeholder.svg"}
                   alt={`${alt} - ${index + 1}`}
+                  fill
+                  sizes="(min-width: 1280px) 640px, (min-width: 768px) 70vw, 100vw"
                   className={`${objectFitClass} w-full h-full`}
                 />
                 {captions && captions[index] ? (

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import * as React from "react"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
@@ -30,8 +31,14 @@ export function RoomCarousel({ items }: RoomCarouselProps) {
         <CarouselContent>
           {items.map((item, index) => (
             <CarouselItem key={index} className="basis-full sm:basis-[60%] md:basis-[55%] lg:basis-[48%]">
-              <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-200 hover:scale-[1.01]">
-                <img src={item.src} alt={item.alt} className="w-full h-full object-cover aspect-[4/3]" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-200 hover:scale-[1.01] aspect-[4/3]">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(min-width: 1024px) 45vw, (min-width: 768px) 60vw, 100vw"
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-200 group-hover:opacity-90" />
                 <div className="absolute inset-0 flex items-end">
                   <div className="w-full p-4 sm:p-5 text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
