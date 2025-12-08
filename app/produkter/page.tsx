@@ -15,12 +15,9 @@ export default function ProductsPage() {
     let pdfPath = ""
     let fileName = ""
 
-    if (productId === "arctic-18") {
-      pdfPath = "/produktark/produktark_KIT-Arctic18.pdf"
-      fileName = "Cooper&Hunter Arctic 18-produktark.pdf"
-    } else if (productId === "arctic-24") {
-      pdfPath = "/produktark/produktark_KIT-Arctic24.pdf"
-      fileName = "Cooper&Hunter Arctic 24-produktark.pdf"
+    if (productId === "arctic-18" || productId === "arctic-24" || productId === "arctic") {
+      pdfPath = "/produktark/arctic-produktark.pdf"
+      fileName = "Cooper&Hunter Arctic-produktark.pdf"
     } else {
       pdfPath = `/produktark/${productId}-produktark.pdf`
       fileName = `Cooper&Hunter ${productId.charAt(0).toUpperCase() + productId.slice(1)}-produktark.pdf`

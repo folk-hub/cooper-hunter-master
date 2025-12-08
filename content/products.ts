@@ -77,7 +77,7 @@ export const products: Product[] = [
         "Cooper&Hunter Arctic 18 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 18 deg optimal komfort og minimal strømregning.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
-      downloadUrl: "/produktark/produktark_KIT-Arctic18.pdf",
+      downloadUrl: "/produktark/arctic-produktark.pdf",
       findDealerButton: "Finn forhandler",
       priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
       specifications: {
@@ -129,7 +129,7 @@ export const products: Product[] = [
         "Cooper&Hunter Arctic 24 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 24 deg optimal komfort og minimal strømregning.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
-      downloadUrl: "/produktark/produktark_KIT-Arctic24.pdf",
+      downloadUrl: "/produktark/arctic-produktark.pdf",
       findDealerButton: "Finn forhandler",
       priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
       specifications: {

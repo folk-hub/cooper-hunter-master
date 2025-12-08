@@ -32,8 +32,8 @@ export default function Arctic18Page() {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    link.href = "/produktark/produktark_KIT-Arctic18.pdf"
-    link.download = "Cooper&Hunter Arctic 18-produktark.pdf"
+    link.href = "/produktark/arctic-produktark.pdf"
+    link.download = "Cooper&Hunter Arctic-produktark.pdf"
     link.click()
   }
 
