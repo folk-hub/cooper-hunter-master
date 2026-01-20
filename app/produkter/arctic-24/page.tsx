@@ -64,7 +64,17 @@ export default function Arctic24Page() {
                 {product.images && <ProductCarousel images={product.images} alt={product.name} />}
 
                 <div className="prose prose-gray max-w-none">
-                  <p className="text-lg leading-relaxed">{detailPage.description}</p>
+                  {(() => {
+                    const [lead, quote] = detailPage.description.split("\n")
+                    return (
+                      <>
+                        <p className="text-lg leading-relaxed">{lead}</p>
+                        {quote ? (
+                          <p className="mt-4 border-l-4 border-blue-900/30 pl-4 italic text-blue-900/80">“{quote}”</p>
+                        ) : null}
+                      </>
+                    )
+                  })()}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">

@@ -48,6 +48,20 @@ export interface Homepage {
   intro: IntroSection
   features: Feature[]
   productsSection: ProductsSection
+  airCareSection: {
+    heading: string
+    bullets: string[]
+  }
+  smartControlSection: {
+    heading: string
+    description: string
+    bullets: string[]
+  }
+  performanceSection: {
+    heading: string
+    description: string
+    bullets: string[]
+  }
   imageSection1: ImageSection
   imageSection2: ImageSection
   cta: CTASection

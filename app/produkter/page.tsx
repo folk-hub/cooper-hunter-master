@@ -72,7 +72,19 @@ export default function ProductsPage() {
                         {product.scop}
                       </Badge>
                       <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">{product.name}</h2>
-                      <p className="text-lg text-muted-foreground mb-6">{product.description}</p>
+                      {(() => {
+                        const [lead, quote] = product.description.split("\n")
+                        return (
+                          <div className="mb-6">
+                            <p className="text-lg text-muted-foreground">{lead}</p>
+                            {quote ? (
+                              <p className="mt-3 border-l-4 border-blue-900/30 pl-4 italic text-blue-900/80">
+                                “{quote}”
+                              </p>
+                            ) : null}
+                          </div>
+                        )
+                      })()}
 
                       {/* Key features */}
                       <ul className="space-y-3 mb-8">

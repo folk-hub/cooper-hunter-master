@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Download, Wifi, Zap, Gauge, ThermometerSnowflake } from "lucide-react"
+import { ArrowLeft, Download, Wifi, Zap, Gauge, Thermometer, ThermometerSnowflake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -54,7 +54,17 @@ export default function ArcticPage() {
                 <ProductCarousel images={product.images || []} alt={product.name} />
 
                 <div className="prose prose-gray max-w-none">
-                  <p className="text-lg leading-relaxed">{detailPage.description}</p>
+                  {(() => {
+                    const [lead, quote] = detailPage.description.split("\n")
+                    return (
+                      <>
+                        <p className="text-lg leading-relaxed">{lead}</p>
+                        {quote ? (
+                          <p className="mt-4 border-l-4 border-blue-900/30 pl-4 italic text-blue-900/80">“{quote}”</p>
+                        ) : null}
+                      </>
+                    )
+                  })()}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -102,8 +112,8 @@ export default function ArcticPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {detailPage.keyFeatures.items.map((feature, index) => {
-                        const icons = [ThermometerSnowflake, Wifi, Zap, Gauge]
-                        const Icon = icons[index]
+                        const icons = [ThermometerSnowflake, Thermometer, Wifi, Zap, Gauge]
+                        const Icon = icons[index] ?? ThermometerSnowflake
                         return (
                           <div key={index} className="flex gap-4">
                             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">

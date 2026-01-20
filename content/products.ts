@@ -8,7 +8,7 @@ export const products: Product[] = [
   {
     id: "arctic",
     name: "Cooper&Hunter Arctic 12",
-    description: "Høy effektivitet – SCOP 4.1",
+    description: "Høy effektivitet – SCOP 4.1.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
@@ -22,7 +22,7 @@ export const products: Product[] = [
       title: "Cooper&Hunter Arctic 12",
       subtitle: "Høy effektivitet – SCOP 4.1",
       description:
-        "Cooper&Hunter Arctic 12 er en høyeffektiv varmepumpe designet for de kaldeste klimaene. Med en SCOP på 4.1 og evnen til å varme ned til -25°C, er dette det perfekte valget for norske forhold.",
+        "Cooper&Hunter Arctic 12 er en høyeffektiv varmepumpe designet for de kaldeste klimaene. Med en SCOP på 4.1 og evnen til å varme ned til -25°C, er dette det perfekte valget for norske forhold.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
@@ -47,6 +47,10 @@ export const products: Product[] = [
             description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
           },
           {
+            title: "+8°C vedlikeholdsvarme – perfekt for hytter",
+            description: "Vedlikeholdsvarme-modus som holder stabil lav temperatur.",
+          },
+          {
             title: "Integrert WiFi",
             description: "Styr varmepumpen fra mobilen din hvor som helst",
           },
@@ -65,7 +69,7 @@ export const products: Product[] = [
   {
     id: "arctic-18",
     name: "Cooper&Hunter Arctic 18",
-    description: "Høy effektivitet – SCOP 4.2",
+    description: "Høy effektivitet – SCOP 4.2.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
@@ -74,7 +78,7 @@ export const products: Product[] = [
       title: "Cooper&Hunter Arctic 18",
       subtitle: "høy effektivitet – SCOP 4.2",
       description:
-        "Cooper&Hunter Arctic 18 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 18 deg optimal komfort og minimal strømregning.",
+        "Cooper&Hunter Arctic 18 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 18 deg optimal komfort og minimal strømregning.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
@@ -99,6 +103,10 @@ export const products: Product[] = [
             description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
           },
           {
+            title: "+8°C vedlikeholdsvarme – perfekt for hytter",
+            description: "Vedlikeholdsvarme-modus som holder stabil lav temperatur.",
+          },
+          {
             title: "Integrert WiFi",
             description: "Styr varmepumpen fra mobilen din hvor som helst",
           },
@@ -117,7 +125,7 @@ export const products: Product[] = [
   {
     id: "arctic-24",
     name: "Cooper&Hunter Arctic 24",
-    description: "Høy effektivitet – SCOP 4.2",
+    description: "Høy effektivitet – SCOP 4.2.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
@@ -126,7 +134,7 @@ export const products: Product[] = [
       title: "Cooper&Hunter Arctic 24",
       subtitle: "høy effektivitet – SCOP 4.2",
       description:
-        "Cooper&Hunter Arctic 24 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 24 deg optimal komfort og minimal strømregning.",
+        "Cooper&Hunter Arctic 24 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.2 og avanserte funksjoner, gir Arctic 24 deg optimal komfort og minimal strømregning.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
@@ -151,6 +159,10 @@ export const products: Product[] = [
             description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
           },
           {
+            title: "+8°C vedlikeholdsvarme – perfekt for hytter",
+            description: "Vedlikeholdsvarme-modus som holder stabil lav temperatur.",
+          },
+          {
             title: "Integrert WiFi",
             description: "Styr varmepumpen fra mobilen din hvor som helst",
           },
@@ -169,7 +181,7 @@ export const products: Product[] = [
   {
     id: "daytona",
     name: "Cooper&Hunter Daytona",
-    description: "Høy effektivitet – SCOP 4.1",
+    description: "Høy effektivitet – SCOP 4.1.\nDesignmodellen – interiørvennlig og effektiv.",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
@@ -184,7 +196,7 @@ export const products: Product[] = [
       title: "Cooper&Hunter Daytona",
       subtitle: "høy effektivitet – SCOP 4.1",
       description:
-        "Cooper&Hunter Daytona representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.1 og avanserte funksjoner, gir Daytona deg optimal komfort og minimal strømregning.",
+        "Cooper&Hunter Daytona representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.1 og avanserte funksjoner, gir Daytona deg optimal komfort og minimal strømregning.\nDesignmodellen – interiørvennlig og effektiv.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/daytona-produktark.pdf",
@@ -207,6 +219,10 @@ export const products: Product[] = [
           {
             title: "Fabrikkgarantert varmekapasitet ned til -25 C",
             description: "Pålitelig oppvarming selv under ekstreme vinterforhold",
+          },
+          {
+            title: "+8°C vedlikeholdsvarme – perfekt for hytter",
+            description: "Vedlikeholdsvarme-modus som holder stabil lav temperatur.",
           },
           {
             title: "Integrert WiFi",

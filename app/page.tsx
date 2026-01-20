@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Snowflake, Zap, Shield, TrendingDown } from "lucide-react"
+import { ArrowRight, Snowflake, Zap, Shield, TrendingDown, Sparkles, Fan, Filter, Wifi, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -50,16 +50,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-12 bg-background md:py-16">
+        <section className="py-10 md:py-12 bg-background">
           <div className="container">
-            <p className="md:text-2xl text-center max-w-4xl mx-auto leading-relaxed text-blue-900 text-lg">
+            <p className="md:text-2xl text-left md:text-center max-w-4xl mx-auto leading-relaxed text-blue-900 text-lg">
               {homepage.intro.text}
             </p>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="bg-transparent py-0 md:py-0 mb-0">
+        <section className="bg-transparent py-10 md:py-12">
           <div className="max-w-7xl bg-blue-50 rounded-2xl mx-4 sm:mx-6 lg:mx-auto my-0 py-0">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
               <Card className="border-none shadow-none bg-transparent p-0 my-5">
@@ -94,9 +94,9 @@ export default function HomePage() {
         </section>
 
         {/* Room inspiration Section */}
-        <section className="pt-14 pb-2 md:pt-18 md:pb-4">
+        <section className="py-10 md:py-12">
           <div className="container px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className="text-left md:text-center max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                 Passer perfekt i flere rom og på hytta
               </h2>
@@ -118,9 +118,9 @@ export default function HomePage() {
         </section>
 
         {/* Products Section */}
-        <section className="md:py-0 my-0 mb-0 py-0">
+        <section className="py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-20 mb-8">
-            <div className="text-center mb-12">
+            <div className="text-left md:text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.productsSection.heading}</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{homepage.productsSection.description}</p>
             </div>
@@ -146,7 +146,19 @@ export default function HomePage() {
                   )}
                   <CardHeader>
                     <CardTitle className="text-xl">{product.name}</CardTitle>
-                    <CardDescription>{product.description}</CardDescription>
+                    {(() => {
+                      const [lead, quote] = product.description.split("\n")
+                      return (
+                        <CardDescription>
+                          <span>{lead}</span>
+                          {quote ? (
+                            <span className="mt-2 block border-l-4 border-blue-900/30 pl-3 italic text-blue-900/80">
+                              “{quote}”
+                            </span>
+                          ) : null}
+                        </CardDescription>
+                      )
+                    })()}
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
@@ -173,7 +185,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-0 md:py-20">
+        <section className="py-10 md:py-12">
           <div className="container px-4 sm:px-6 mb-8">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
               <Image
@@ -196,9 +208,147 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="py-10 md:py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="rounded-3xl border border-blue-900/10 bg-white/70 px-6 py-8 shadow-sm md:px-10 md:py-10">
+              <div className="mx-auto max-w-3xl text-left md:text-center">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Smartere inneklima</h2>
+                <p className="mt-3 text-lg text-muted-foreground">
+                  Teknologi, komfort og driftssikkerhet som jobber sammen i én helhet.
+                </p>
+              </div>
+
+              <div className="mt-10 space-y-10">
+                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-start">
+                  <div className="flex justify-center md:justify-start">
+                    <p className="inline-flex items-center gap-2 rounded-full bg-blue-900/10 px-4 py-1 text-sm font-semibold text-blue-900">
+                      Renere luft
+                    </p>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {homepage.airCareSection.bullets.map((item, index) => {
+                      const icons = [Sparkles, Fan, Filter]
+                      const Icon = icons[index] ?? Sparkles
+                      return (
+                        <Link key={item} href="/funksjoner#helse-funksjoner" className="block">
+                          <Card className="border-blue-900/10 shadow-none transition hover:bg-blue-900/5">
+                            <CardContent className="p-4 text-center">
+                              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/10 text-blue-900">
+                                <Icon className="h-5 w-5" />
+                              </div>
+                              <p className="text-sm font-medium text-blue-900">{item}</p>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-start">
+                  <div className="flex justify-center md:justify-start">
+                    <p className="inline-flex items-center gap-2 rounded-full bg-blue-900/10 px-4 py-1 text-sm font-semibold text-blue-900">
+                      Smart styring
+                    </p>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {homepage.smartControlSection.bullets.map((item, index) => {
+                      const icons = [Wifi, Clock]
+                      const Icon = icons[index] ?? Wifi
+                      return (
+                        <Link key={item} href="/funksjoner#kontroll-funksjoner" className="block">
+                          <Card className="border-blue-900/10 shadow-none transition hover:bg-blue-900/5">
+                            <CardContent className="p-4 text-center">
+                              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/10 text-blue-900">
+                                <Icon className="h-5 w-5" />
+                              </div>
+                              <p className="text-sm font-medium text-blue-900">{item}</p>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-start">
+                  <div className="flex justify-center md:justify-start">
+                    <p className="inline-flex items-center gap-2 rounded-full bg-blue-900/10 px-4 py-1 text-sm font-semibold text-blue-900">
+                      Ytelser
+                    </p>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {homepage.performanceSection.bullets.map((item, index) => {
+                      const icons = [Zap, Shield, Snowflake]
+                      const Icon = icons[index] ?? Zap
+                      const [title, body] = item.split("|")
+                      return (
+                        <Link key={item} href="/funksjoner#teknologiske-funksjoner" className="block">
+                          <Card className="border-blue-900/10 shadow-none transition hover:bg-blue-900/5">
+                            <CardContent className="p-4 text-center">
+                              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/10 text-blue-900">
+                                <Icon className="h-5 w-5" />
+                              </div>
+                              <p className="text-sm font-semibold text-blue-900">{title}</p>
+                              <p className="mt-1 text-sm text-muted-foreground">{body}</p>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10 flex justify-center md:justify-start">
+                <Link
+                  href="/funksjoner"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700"
+                >
+                  Se alle funksjoner
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 md:py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="rounded-3xl border border-blue-900/10 bg-blue-900/5 px-6 py-10 md:px-10 md:py-12">
+              <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+                <div className="space-y-4 text-left">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-900/60">Prosjekt for</p>
+                  <h2 className="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">
+                    SAMFUNNSANSVAR
+                    <br />
+                    “VI REDDER PLANETEN”
+                  </h2>
+                  <p className="text-base text-muted-foreground">
+                    Høsten 2019 kunngjorde det globale klimamerket Cooper&Hunter starten på gjennomføringen av det
+                    langsiktige prosjektet “Vi redder planeten”. Prosjektet omfatter alle land der klimaanlegg selges.
+                    Cooper&Hunter selger klimaanlegg i mer enn 45 land, inkludert Ukraina.
+                  </p>
+                </div>
+                <div className="flex justify-center md:justify-end">
+                  <div className="w-full max-w-[320px] rounded-2xl bg-white/80 p-6 shadow-sm">
+                    <Image
+                      src="/images/Logo_R32.png"
+                      alt="Cooper&Hunter R32 logo"
+                      width={320}
+                      height={240}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section id="kontakt" className="py-16 md:py-24 text-primary-foreground bg-blue-900">
-          <div className="container text-center">
+        <section id="kontakt" className="py-10 md:py-12 text-primary-foreground bg-blue-900">
+          <div className="container text-left md:text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.cta.heading}</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">{homepage.cta.description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -219,7 +369,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-8 md:py-20">
+        <section className="py-10 md:py-12">
           <div className="container px-4 sm:px-6">
             <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
               <Image

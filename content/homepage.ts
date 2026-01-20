@@ -23,6 +23,25 @@ export const homepage: Homepage = {
     description: "Utforsk vårt utvalg av høykvalitets varmepumper fra Cooper&Hunter",
     buttonText: "Les mer",
   },
+  airCareSection: {
+    heading: "Renere luft. Enklere vedlikehold.",
+    bullets: ["Selvrens / “Self-clean”", "Fukt- og luktredusering (X-Fan)", "Filtrering / luftkvalitet"],
+  },
+  smartControlSection: {
+    heading: "Smart styring",
+    description: "",
+    bullets: ["App/WiFi-styring", "Timer, komfortstyring, enkel kontroll"],
+  },
+  performanceSection: {
+    heading: "Ytelser du kan stole på",
+    description:
+      "Cooper&Hunter er utviklet for stabil drift i nordiske forhold – med teknologier som gir jevn varme, lavere energibruk og økt slitestyrke.",
+    bullets: [
+      "Inverterteknologi|Jevn temperatur og lavere strømforbruk",
+      "BlueFin-beskyttelse|Bedre korrosjonsbeskyttelse og lengre levetid",
+      "Drift i kulde|Stabil varme også når temperaturen faller",
+    ],
+  },
   imageSection1: {
     title: "Ytelser du kan stole på",
     description: "kraftig effekt og høy energieffektivitet selv på de kaldeste dagene.",
