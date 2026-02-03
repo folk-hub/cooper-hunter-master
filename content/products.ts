@@ -186,7 +186,7 @@ export const products: Product[] = [
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
     price: "Kontakt forhandler for pris",
     images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Daytona-Grafitt-hvit-yc38JL8CrvJ3Txnfm9733jTs8D6wJZ.jpg", // Updated first carousel image to show both white and graphite variants
+      "/daytona-hero.jpg",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Daytona-Grafitt-w2KUWnj6gEro2sBIwKkxxzRh0Q0jru.webp",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-daytona-side-BrX0v44v92BIMKgPbHyyn1v5wCIeCx.jpg",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-daytona-under-ynEbnyUTQ2zgI06XbHdn5RFjzv3jBT.jpg",
@@ -240,60 +240,65 @@ export const products: Product[] = [
       },
     },
   },
-  // {
-  //   id: "supreme",
-  //   name: "Cooper&Hunter Supreme",
-  //   description: "Høy effektivitet og oppvarming/kjøling Arktis/Arktis+",
-  //   scop: "SCOP 5.1",
-  //   features: ["varmedrift ned til -30", "Integrert Wifi", "Energiklasse A+++"],
-  //   price: "Kontakt forhandler for pris",
-  //   images: [
-  //     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-supreme-i3uofuYUwt0RpL1naJXqTi6My2xLGW.jpg", // cooper-hunter-supreme.jpg - showing all four color variants
-  //   ],
-  //   buttonText: "Kommer i 2025",
-  //   detailPage: {
-  //     title: "Cooper&Hunter Supreme",
-  //     subtitle: "Høy effektivitet og oppvarming/kjøling Arktis/Arktis+",
-  //     description:
-  //       "Cooper&Hunter Supreme tilbyr utmerket ytelse til en konkurransedyktig pris. Med fire stilfulle fargevarianter og solid effektivitet, er Supreme det perfekte valget for deg som ønsker kvalitet uten å gå på kompromiss.",
-  //     backButton: "Tilbake til produkter",
-  //     downloadButton: "Last ned produktark",
-  //     findDealerButton: "Finn forhandler",
-  //     priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
-  //     specifications: {
-  //       title: "Tekniske spesifikasjoner",
-  //       items: [
-  //         { label: "SCOP", value: "5.1" },
-  //         { label: "Energiklasse", value: "A+++ SEER:8.5" },
-  //         { label: "Varmekapasitet", value: "0.88 - 7.20 kW" },
-  //         { label: "Kjølekapasitet", value: "0.85 - 5.00 kW" },
-  //         { label: "Støynivå innedel", value: "20-46 dB(A)" },
-  //         { label: "Støynivå utedel", value: "54 dB(A)" },
-  //       ],
-  //     },
-  //     keyFeatures: {
-  //       title: "Nøkkelfunksjoner",
-  //       items: [
-  //         {
-  //           title: "Fabrikkgarantert ned til -30 C",
-  //           description: "Effektiv oppvarming i de fleste norske klimaer",
-  //         },
-  //         {
-  //           title: "Kjøling fabrikkgarantert ned til -18 C",
-  //           description: "Holder deg kjølig selv på de varmeste sommerdagene",
-  //         },
-  //         {
-  //           title: "Fire fargevarianter",
-  //           description: "Velg mellom hvit, sølv, champagne eller svart for å matche ditt interiør",
-  //         },
-  //         {
-  //           title: "Energiklasse A+++",
-  //           description: "God energieffektivitet for lavere strømkostnader",
-  //         },
-  //       ],
-  //     },
-  //   },
-  // },
+  {
+    id: "supreme",
+    name: "Cooper&Hunter Supreme",
+    description: "Høyeste effektivitet – SCOP 5.1.\nToppmodellen – maksimal kraft, komfort og stabil varme.",
+    scop: "SCOP 5.1",
+    features: ["Varmedrift ned til -30°C", "Integrert WiFi", "Energiklasse A+++"],
+    price: "Kontakt forhandler for pris",
+    images: [
+      "/supreme-hero.jpg",
+      "/supreme-1.webp",
+      "/supreme-2.webp",
+      "/supreme-3.webp",
+      "/supreme-4.webp",
+      "/supreme-5.webp",
+    ],
+    detailPage: {
+      title: "Cooper&Hunter Supreme",
+      subtitle: "Høyeste effektivitet – SCOP 5.1",
+      description:
+        "Cooper&Hunter Supreme er toppmodellen i sortimentet – en kraftig varmepumpe spesielt utviklet for nordisk klima. Med avansert to-trinns kompressor, SCOP på 5.1 og energiklasse A+++ gir den maksimal effekt, høyeste energieffektivitet og stabil varme selv ved ekstreme temperaturer ned til -30°C.\nNår komfort møter stillhet – med lydnivå helt ned til 18 dB(A).",
+      backButton: "Tilbake til produkter",
+      downloadButton: "Last ned produktark",
+      downloadUrl: "/produktark/supreme-produktark.pdf",
+      findDealerButton: "Finn forhandler",
+      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      specifications: {
+        title: "Tekniske spesifikasjoner",
+        items: [
+          { label: "SCOP", value: "5.1" },
+          { label: "Energiklasse", value: "A+++" },
+          { label: "Varmekapasitet", value: "0.88 - 7.20 kW" },
+          { label: "Kjølekapasitet", value: "0.85 - 5.00 kW" },
+          { label: "Støynivå innedel", value: "18-44 dB(A)" },
+          { label: "Støynivå utedel", value: "54 dB(A)" },
+        ],
+      },
+      keyFeatures: {
+        title: "Nøkkelfunksjoner",
+        items: [
+          {
+            title: "Fabrikkgarantert varmekapasitet ned til -30°C",
+            description: "Pålitelig oppvarming selv under de mest ekstreme vinterforhold",
+          },
+          {
+            title: "Kjøling ned til -18°C og opp til +54°C",
+            description: "Effektiv klimakontroll hele året, uansett utetemperatur",
+          },
+          {
+            title: "Ekstra stillegående – ned til 18 dB(A)",
+            description: "Avansert vifteteknologi og stillemodus for maksimal komfort",
+          },
+          {
+            title: "Integrert WiFi",
+            description: "Styr varmepumpen fra mobilen din hvor som helst via app",
+          },
+        ],
+      },
+    },
+  },
 ]
 
 // Helper function to get product by ID

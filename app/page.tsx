@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ProductCarousel } from "@/components/product-carousel"
 import { RoomCarousel } from "@/components/room-carousel"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { siteContent } from "@/content"
 
 export default function HomePage() {
@@ -51,17 +52,20 @@ export default function HomePage() {
         </section>
 
         <section className="py-10 md:py-12 bg-background">
-          <div className="container">
-            <p className="md:text-2xl text-left md:text-center max-w-4xl mx-auto leading-relaxed text-blue-900 text-lg">
-              {homepage.intro.text}
-            </p>
-          </div>
+          <AnimateOnScroll>
+            <div className="container">
+              <p className="md:text-2xl text-left md:text-center max-w-4xl mx-auto leading-relaxed text-blue-900 text-lg">
+                {homepage.intro.text}
+              </p>
+            </div>
+          </AnimateOnScroll>
         </section>
 
         {/* Features Section */}
         <section className="bg-transparent py-10 md:py-12">
-          <div className="max-w-7xl bg-blue-50 rounded-2xl mx-4 sm:mx-6 lg:mx-auto my-0 py-0">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
+          <AnimateOnScroll>
+            <div className="max-w-7xl bg-blue-50 rounded-2xl mx-4 sm:mx-6 lg:mx-auto my-0 py-0">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
               <Card className="border-none shadow-none bg-transparent p-0 my-5">
                 <CardHeader className="p-0 my-2.5">
                   <TrendingDown className="h-7 w-7 md:h-9 md:w-9 text-blue-900 mx-auto mb-0" />
@@ -89,43 +93,51 @@ export default function HomePage() {
                   <CardTitle className="text-center text-sm text-blue-900">{homepage.features[3].title}</CardTitle>
                 </CardHeader>
               </Card>
+              </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         {/* Room inspiration Section */}
         <section className="py-10 md:py-12">
           <div className="container px-4 sm:px-6">
-            <div className="text-left md:text-center max-w-3xl mx-auto mb-10">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-                Passer perfekt i flere rom og på hytta
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Cooper &amp; Hunter varmepumper gir komfort der du trenger det: stue, hjemmekontor, treningsrom,
-                soverom eller fritidsbolig. Stilrent design og stille drift gjør dem enkle å plassere.
-              </p>
-            </div>
-            <RoomCarousel
-              items={[
-                { src: "/images/arctic-kontor-sommer.webp", alt: "Hjemmekontor med varmepumpe", label: "Hjemmekontoret" },
-                { src: "/images/daytona-soverom-sommer.webp", alt: "Soverom med varmepumpe", label: "Soverommet" },
-                { src: "/images/daytona-skandinavisk-sommer.webp", alt: "Stue i skandinavisk stil med varmepumpe", label: "Stuen" },
-                { src: "/images/treningsrom-daytona.webp", alt: "Moderne treningsrom med varmepumpe", label: "Hjemmegym" },
-                { src: "/images/daytona-vinter-hytte.webp", alt: "Hytte med varmepumpe om vinteren", label: "Hytta" },
-              ]}
-            />
+            <AnimateOnScroll>
+              <div className="text-left md:text-center max-w-3xl mx-auto mb-10">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                  Passer perfekt i flere rom og på hytta
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Cooper &amp; Hunter varmepumper gir komfort der du trenger det: stue, hjemmekontor, treningsrom,
+                  soverom eller fritidsbolig. Stilrent design og stille drift gjør dem enkle å plassere.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={100}>
+              <RoomCarousel
+                items={[
+                  { src: "/images/arctic-kontor-sommer.webp", alt: "Hjemmekontor med varmepumpe", label: "Hjemmekontoret" },
+                  { src: "/images/daytona-soverom-sommer.webp", alt: "Soverom med varmepumpe", label: "Soverommet" },
+                  { src: "/images/daytona-skandinavisk-sommer.webp", alt: "Stue i skandinavisk stil med varmepumpe", label: "Stuen" },
+                  { src: "/images/treningsrom-daytona.webp", alt: "Moderne treningsrom med varmepumpe", label: "Hjemmegym" },
+                  { src: "/images/daytona-vinter-hytte.webp", alt: "Hytte med varmepumpe om vinteren", label: "Hytta" },
+                ]}
+              />
+            </AnimateOnScroll>
           </div>
         </section>
 
         {/* Products Section */}
         <section className="py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-20 mb-8">
-            <div className="text-left md:text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.productsSection.heading}</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{homepage.productsSection.description}</p>
-            </div>
+          <div className="container px-4 sm:px-6 mt-20 mb-8">
+            <AnimateOnScroll>
+              <div className="text-left md:text-center mb-12">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.productsSection.heading}</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{homepage.productsSection.description}</p>
+              </div>
+            </AnimateOnScroll>
 
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <AnimateOnScroll delay={100}>
+              <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
               {products.map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow p-0 relative">
                   <Badge variant="secondary" className="absolute top-4 left-4 z-10">
@@ -139,7 +151,7 @@ export default function HomePage() {
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
-                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                        sizes="(min-width: 1280px) 20vw, (min-width: 768px) 50vw, 100vw"
                         className="object-cover"
                       />
                     </div>
@@ -181,44 +193,48 @@ export default function HomePage() {
                   </CardFooter>
                 </Card>
               ))}
-            </div>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
         <section className="py-10 md:py-12">
-          <div className="container px-4 sm:px-6 mb-8">
-            <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-              <Image
-                src="/images/daytona-soverom-vinter.webp"
-                alt="Perfekt inneklima"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.23)]" />
-              <div className="relative z-10 text-center text-white py-12 px-6">
-                <p className="text-sm md:text-base uppercase tracking-wider opacity-90 mb-1">
-                  {homepage.imageSection1.title}
-                </p>
-                <h2 className="text-2xl md:text-5xl font-bold text-balance text-white px-2.5">
-                  {homepage.imageSection1.description}
-                </h2>
+          <AnimateOnScroll>
+            <div className="container px-4 sm:px-6 mb-8">
+              <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
+                <Image
+                  src="/images/daytona-soverom-vinter.webp"
+                  alt="Perfekt inneklima"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[rgba(0,0,0,0.23)]" />
+                <div className="relative z-10 text-center text-white py-12 px-6">
+                  <p className="text-sm md:text-base uppercase tracking-wider opacity-90 mb-1">
+                    {homepage.imageSection1.title}
+                  </p>
+                  <h2 className="text-2xl md:text-5xl font-bold text-balance text-white px-2.5">
+                    {homepage.imageSection1.description}
+                  </h2>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         <section className="py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="rounded-3xl border border-blue-900/10 bg-white/70 px-6 py-8 shadow-sm md:px-10 md:py-10">
-              <div className="mx-auto max-w-3xl text-left md:text-center">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Smartere inneklima</h2>
-                <p className="mt-3 text-lg text-muted-foreground">
-                  Teknologi, komfort og driftssikkerhet som jobber sammen i én helhet.
-                </p>
-              </div>
+          <AnimateOnScroll>
+            <div className="container px-4 sm:px-6">
+              <div className="rounded-3xl border border-blue-900/10 bg-white/70 px-6 py-8 shadow-sm md:px-10 md:py-10">
+                <div className="mx-auto max-w-3xl text-left md:text-center">
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Smartere inneklima</h2>
+                  <p className="mt-3 text-lg text-muted-foreground">
+                    Teknologi, komfort og driftssikkerhet som jobber sammen i én helhet.
+                  </p>
+                </div>
 
-              <div className="mt-10 space-y-10">
+                <div className="mt-10 space-y-10">
                 <div className="grid gap-6 md:grid-cols-[220px_1fr] md:items-start">
                   <div className="flex justify-center md:justify-start">
                     <p className="inline-flex items-center gap-2 rounded-full bg-blue-900/10 px-4 py-1 text-sm font-semibold text-blue-900">
@@ -300,96 +316,103 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-10 flex justify-center md:justify-start">
-                <Link
-                  href="/funksjoner"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700"
-                >
-                  Se alle funksjoner
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="mt-10 flex justify-center md:justify-start">
+                  <Link
+                    href="/funksjoner"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700"
+                  >
+                    Se alle funksjoner
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         <section className="py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="rounded-3xl border border-blue-900/10 bg-blue-900/5 px-6 py-10 md:px-10 md:py-12">
-              <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-                <div className="space-y-4 text-left">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-900/60">Prosjekt for</p>
-                  <h2 className="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">
-                    SAMFUNNSANSVAR
-                    <br />
-                    “VI REDDER PLANETEN”
-                  </h2>
-                  <p className="text-base text-muted-foreground">
-                    Høsten 2019 kunngjorde det globale klimamerket Cooper&Hunter starten på gjennomføringen av det
-                    langsiktige prosjektet “Vi redder planeten”. Prosjektet omfatter alle land der klimaanlegg selges.
-                    Cooper&Hunter selger klimaanlegg i mer enn 45 land, inkludert Ukraina.
-                  </p>
-                </div>
-                <div className="flex justify-center md:justify-end">
-                  <div className="w-full max-w-[320px] rounded-2xl bg-white/80 p-6 shadow-sm">
-                    <Image
-                      src="/images/Logo_R32.png"
-                      alt="Cooper&Hunter R32 logo"
-                      width={320}
-                      height={240}
-                      className="h-auto w-full object-contain"
-                    />
+          <AnimateOnScroll>
+            <div className="container px-4 sm:px-6">
+              <div className="rounded-3xl border border-blue-900/10 bg-blue-900/5 px-6 py-10 md:px-10 md:py-12">
+                <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+                  <div className="space-y-4 text-left">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-900/60">Prosjekt for</p>
+                    <h2 className="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">
+                      SAMFUNNSANSVAR
+                      <br />
+                      &ldquo;VI REDDER PLANETEN&rdquo;
+                    </h2>
+                    <p className="text-base text-muted-foreground">
+                      Høsten 2019 kunngjorde det globale klimamerket Cooper&Hunter starten på gjennomføringen av det
+                      langsiktige prosjektet &ldquo;Vi redder planeten&rdquo;. Prosjektet omfatter alle land der klimaanlegg selges.
+                      Cooper&Hunter selger klimaanlegg i mer enn 45 land, inkludert Ukraina.
+                    </p>
+                  </div>
+                  <div className="flex justify-center md:justify-end">
+                    <div className="w-full max-w-[320px] rounded-2xl bg-white/80 p-6 shadow-sm">
+                      <Image
+                        src="/images/Logo_R32.png"
+                        alt="Cooper&Hunter R32 logo"
+                        width={320}
+                        height={240}
+                        className="h-auto w-full object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         {/* CTA Section */}
         <section id="kontakt" className="py-10 md:py-12 text-primary-foreground bg-blue-900">
-          <div className="container text-left md:text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.cta.heading}</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">{homepage.cta.description}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/produkter">{homepage.cta.primaryButton}</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                asChild
-              >
-                <Link href="https://www.varmepumpeservice.no/gratis-befaring" target="_blank" rel="noopener noreferrer">
-                  {homepage.cta.secondaryButton}
-                </Link>
-              </Button>
+          <AnimateOnScroll>
+            <div className="container text-left md:text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">{homepage.cta.heading}</h2>
+              <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">{homepage.cta.description}</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="secondary" asChild>
+                  <Link href="/produkter">{homepage.cta.primaryButton}</Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  asChild
+                >
+                  <Link href="https://www.varmepumpeservice.no/gratis-befaring" target="_blank" rel="noopener noreferrer">
+                    {homepage.cta.secondaryButton}
+                  </Link>
+                </Button>
+              </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         <section className="py-10 md:py-12">
-          <div className="container px-4 sm:px-6">
-            <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-              <Image
-                src="/images/yoga.webp"
-                alt="Dokumentert effekt"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.25)]" />
-              <div className="relative z-10 text-center text-white py-12 px-6">
-                <p className="text-sm md:text-base uppercase tracking-wider opacity-90 mb-1">
-                  {homepage.imageSection2.title}
-                </p>
-                <h2 className="text-2xl md:text-5xl font-bold text-balance text-white px-2.5">
-                  {homepage.imageSection2.description}
-                </h2>
+          <AnimateOnScroll>
+            <div className="container px-4 sm:px-6">
+              <div className="relative overflow-hidden rounded-2xl min-h-[400px] md:min-h-[500px] flex items-center justify-center">
+                <Image
+                  src="/images/yoga.webp"
+                  alt="Dokumentert effekt"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[rgba(0,0,0,0.25)]" />
+                <div className="relative z-10 text-center text-white py-12 px-6">
+                  <p className="text-sm md:text-base uppercase tracking-wider opacity-90 mb-1">
+                    {homepage.imageSection2.title}
+                  </p>
+                  <h2 className="text-2xl md:text-5xl font-bold text-balance text-white px-2.5">
+                    {homepage.imageSection2.description}
+                  </h2>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </section>
 
         {/* Three-column image cards section */}
