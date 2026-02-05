@@ -137,7 +137,7 @@ export default function HomePage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={100}>
-              <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+              <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow p-0 relative">
                   <Badge variant="secondary" className="absolute top-4 left-4 z-10">
@@ -151,7 +151,7 @@ export default function HomePage() {
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
-                        sizes="(min-width: 1280px) 20vw, (min-width: 768px) 50vw, 100vw"
+                        sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                         className="object-cover"
                       />
                     </div>

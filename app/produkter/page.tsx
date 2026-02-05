@@ -109,7 +109,7 @@ export default function ProductsPage() {
                           </Link>
                         </Button>
 
-                        {(product.id === "arctic" || product.id === "daytona" || product.id === "arctic-18" || product.id === "arctic-24" || product.id === "supreme") && (
+                        {(product.id === "arctic" || product.id === "daytona" || product.id === "arctic-18" || product.id === "arctic-24" || product.id === "supreme" || product.id === "supreme-12") && (
                           <Button
                             size="lg"
                             className="bg-blue-900 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"

@@ -242,7 +242,7 @@ export const products: Product[] = [
   },
   {
     id: "supreme",
-    name: "Cooper&Hunter Supreme",
+    name: "Cooper&Hunter Supreme 09",
     description: "Høyeste effektivitet – SCOP 5.1.\nToppmodellen – maksimal kraft, komfort og stabil varme.",
     scop: "SCOP 5.1",
     features: ["Varmedrift ned til -30°C", "Integrert WiFi", "Energiklasse A+++"],
@@ -256,10 +256,10 @@ export const products: Product[] = [
       "/supreme-5.webp",
     ],
     detailPage: {
-      title: "Cooper&Hunter Supreme",
+      title: "Cooper&Hunter Supreme 09",
       subtitle: "Høyeste effektivitet – SCOP 5.1",
       description:
-        "Cooper&Hunter Supreme er toppmodellen i sortimentet – en kraftig varmepumpe spesielt utviklet for nordisk klima. Med avansert to-trinns kompressor, SCOP på 5.1 og energiklasse A+++ gir den maksimal effekt, høyeste energieffektivitet og stabil varme selv ved ekstreme temperaturer ned til -30°C.\nNår komfort møter stillhet – med lydnivå helt ned til 18 dB(A).",
+        "Cooper&Hunter Supreme 09 er toppmodellen i sortimentet – en kraftig varmepumpe spesielt utviklet for nordisk klima. Med avansert to-trinns kompressor, SCOP på 5.1 og energiklasse A+++ gir den maksimal effekt, høyeste energieffektivitet og stabil varme selv ved ekstreme temperaturer ned til -30°C.\nNår komfort møter stillhet – med lydnivå helt ned til 18 dB(A).",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/supreme-produktark.pdf",
@@ -289,6 +289,65 @@ export const products: Product[] = [
           },
           {
             title: "Ekstra stillegående – ned til 18 dB(A)",
+            description: "Avansert vifteteknologi og stillemodus for maksimal komfort",
+          },
+          {
+            title: "Integrert WiFi",
+            description: "Styr varmepumpen fra mobilen din hvor som helst via app",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "supreme-12",
+    name: "Cooper&Hunter Supreme 12",
+    description: "Høyeste effektivitet – SCOP 5.1.\nToppmodellen – maksimal kraft, komfort og stabil varme.",
+    scop: "SCOP 5.1",
+    features: ["Varmedrift ned til -30°C", "Integrert WiFi", "Energiklasse A+++"],
+    price: "Kontakt forhandler for pris",
+    images: [
+      "/supreme-hero.jpg",
+      "/supreme-1.webp",
+      "/supreme-2.webp",
+      "/supreme-3.webp",
+      "/supreme-4.webp",
+      "/supreme-5.webp",
+    ],
+    detailPage: {
+      title: "Cooper&Hunter Supreme 12",
+      subtitle: "Høyeste effektivitet – SCOP 5.1",
+      description:
+        "Cooper&Hunter Supreme 12 er toppmodellen i sortimentet – en kraftig varmepumpe spesielt utviklet for nordisk klima. Med avansert to-trinns kompressor, SCOP på 5.1 og energiklasse A+++ gir den maksimal effekt, høyeste energieffektivitet og stabil varme selv ved ekstreme temperaturer ned til -30°C.\nNår komfort møter stillhet – med lydnivå helt ned til 20 dB(A).",
+      backButton: "Tilbake til produkter",
+      downloadButton: "Last ned produktark",
+      downloadUrl: "/produktark/supreme-produktark.pdf",
+      findDealerButton: "Finn forhandler",
+      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      specifications: {
+        title: "Tekniske spesifikasjoner",
+        items: [
+          { label: "SCOP", value: "5.1" },
+          { label: "Energiklasse", value: "A+++" },
+          { label: "Varmekapasitet", value: "0.88 - 7.20 kW" },
+          { label: "Kjølekapasitet", value: "0.85 - 5.00 kW" },
+          { label: "Støynivå innedel", value: "20-44 dB(A)" },
+          { label: "Støynivå utedel", value: "54 dB(A)" },
+        ],
+      },
+      keyFeatures: {
+        title: "Nøkkelfunksjoner",
+        items: [
+          {
+            title: "Fabrikkgarantert varmekapasitet ned til -30°C",
+            description: "Pålitelig oppvarming selv under de mest ekstreme vinterforhold",
+          },
+          {
+            title: "Kjøling ned til -18°C og opp til +54°C",
+            description: "Effektiv klimakontroll hele året, uansett utetemperatur",
+          },
+          {
+            title: "Ekstra stillegående – ned til 20 dB(A)",
             description: "Avansert vifteteknologi og stillemodus for maksimal komfort",
           },
           {
