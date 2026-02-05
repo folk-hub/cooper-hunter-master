@@ -52,7 +52,7 @@ export default function Supreme12Page() {
             </Button>
 
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              <div className="space-y-6">
+              <div className="space-y-6 min-w-0">
                 <div>
                   <Badge variant="secondary" className="mb-4">
                     {product.scop}
