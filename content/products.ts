@@ -209,7 +209,7 @@ export const products: Product[] = [
           { label: "Energiklasse", value: "A+" },
           { label: "Varmekapasitet", value: "0.90 - 4.70 kW" },
           { label: "Kjølekapasitet", value: "0.90 - 4.40 kW" },
-          { label: "Støynivå innedel", value: "21-38 dB(A)" },
+          { label: "Støynivå innedel", value: "19-38 dB(A)" },
           { label: "Støynivå utedel", value: "52 dB(A)" },
         ],
       },
@@ -270,7 +270,7 @@ export const products: Product[] = [
         items: [
           { label: "SCOP", value: "5.1" },
           { label: "Energiklasse", value: "A+++" },
-          { label: "Varmekapasitet", value: "0.88 - 7.20 kW" },
+          { label: "Varmekapasitet", value: "0.70 - 5.50 kW" },
           { label: "Kjølekapasitet", value: "0.85 - 5.00 kW" },
           { label: "Støynivå innedel", value: "18-44 dB(A)" },
           { label: "Støynivå utedel", value: "54 dB(A)" },
