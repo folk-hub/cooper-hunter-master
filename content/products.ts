@@ -180,7 +180,7 @@ export const products: Product[] = [
   },
   {
     id: "daytona",
-    name: "Cooper&Hunter Daytona",
+    name: "Cooper&Hunter Daytona 12",
     description: "Høy effektivitet – SCOP 4.1.\nDesignmodellen – interiørvennlig og effektiv.",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
@@ -193,10 +193,10 @@ export const products: Product[] = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-fjernkontroll-CFIysl6QUOjkgeM1WtVkCI1HZx0a6N.jpg",
     ],
     detailPage: {
-      title: "Cooper&Hunter Daytona",
+      title: "Cooper&Hunter Daytona 12",
       subtitle: "høy effektivitet – SCOP 4.1",
       description:
-        "Cooper&Hunter Daytona representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.1 og avanserte funksjoner, gir Daytona deg optimal komfort og minimal strømregning.\nDesignmodellen – interiørvennlig og effektiv.",
+        "Cooper&Hunter Daytona 12 representerer toppen av varmepumpeteknologi med ledende effektivitet. Med SCOP 4.1 og avanserte funksjoner, gir Daytona 12 deg optimal komfort og minimal strømregning.\nDesignmodellen – interiørvennlig og effektiv.",
       backButton: "Tilbake til produkter",
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/daytona-produktark.pdf",
