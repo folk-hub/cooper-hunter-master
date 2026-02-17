@@ -11,7 +11,7 @@ export const products: Product[] = [
     description: "Høy effektivitet – SCOP 4.1.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: kr 13 900,-*",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-arctic-front-YMULIqS64lYQZCkVCAM9ESsdMBvtWl.jpg", // cooper-hunter-arctic-front.jpg (first image)
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cooper-hunter-arctic-op-O1wLsI5hLg9eZOzXY5PcJf22rkEOaz.jpg", // cooper-hunter-arctic-op.jpg
@@ -27,7 +27,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [
@@ -72,7 +72,7 @@ export const products: Product[] = [
     description: "Høy effektivitet – SCOP 4.2.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: kr 18 990,-*",
     images: ["/cp-arctic18.webp"],
     detailPage: {
       title: "Cooper&Hunter Arctic 18",
@@ -83,7 +83,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [
@@ -128,7 +128,7 @@ export const products: Product[] = [
     description: "Høy effektivitet – SCOP 4.2.\nAllrounderen – stabil ytelse, høy komfort og driftssikker varme.",
     scop: "SCOP 4.2",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: kr 23 990,-*",
     images: ["/cp-arctic24.webp"],
     detailPage: {
       title: "Cooper&Hunter Arctic 24",
@@ -139,7 +139,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/arctic-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [
@@ -184,7 +184,7 @@ export const products: Product[] = [
     description: "Høy effektivitet – SCOP 4.1.\nDesignmodellen – interiørvennlig og effektiv.",
     scop: "SCOP 4.1",
     features: ["Varmedrift ned til -25 C", "Integrert WiFi", "Energiklasse A+"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: kr 15 990,-*",
     images: [
       "/daytona-hero.jpg",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Daytona-Grafitt-w2KUWnj6gEro2sBIwKkxxzRh0Q0jru.webp",
@@ -201,7 +201,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/daytona-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [
@@ -243,10 +243,11 @@ export const products: Product[] = [
   {
     id: "supreme",
     name: "Cooper&Hunter Supreme 09",
+    hidden: true,
     description: "Høyeste effektivitet – SCOP 5.1.\nToppmodellen – maksimal kraft, komfort og stabil varme.",
     scop: "SCOP 5.1",
     features: ["Varmedrift ned til -30°C", "Integrert WiFi", "Energiklasse A+++"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: fra kr 17 990,-*",
     images: [
       "/supreme-hero.jpg",
       "/supreme-1.webp",
@@ -264,7 +265,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/supreme-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [
@@ -305,7 +306,7 @@ export const products: Product[] = [
     description: "Høyeste effektivitet – SCOP 5.1.\nToppmodellen – maksimal kraft, komfort og stabil varme.",
     scop: "SCOP 5.1",
     features: ["Varmedrift ned til -30°C", "Integrert WiFi", "Energiklasse A+++"],
-    price: "Kontakt forhandler for pris",
+    price: "Veil. pris: kr 18 990,- (hvit) / kr 20 990,- (sort)*",
     images: [
       "/supreme-hero.jpg",
       "/supreme-1.webp",
@@ -323,7 +324,7 @@ export const products: Product[] = [
       downloadButton: "Last ned produktark",
       downloadUrl: "/produktark/supreme-produktark.pdf",
       findDealerButton: "Finn forhandler",
-      priceNote: "Pris eks. installasjon. Kontakt forhandler for komplett tilbud.",
+      priceNote: "*Priser er ikke inkludert montering. Monteringspris fra kr 6 000,-.",
       specifications: {
         title: "Tekniske spesifikasjoner",
         items: [

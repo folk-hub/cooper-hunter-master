@@ -106,6 +106,7 @@ export interface Product {
   images?: string[]
   image?: string
   buttonText?: string
+  hidden?: boolean
   detailPage: ProductDetailPage
 }
 

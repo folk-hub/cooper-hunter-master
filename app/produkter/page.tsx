@@ -44,7 +44,7 @@ export default function ProductsPage() {
             </div>
 
             <div className="space-y-24">
-              {siteContent.products.map((product, index) => {
+              {siteContent.products.filter((p) => !p.hidden).map((product, index) => {
                 const isEven = index % 2 === 0
                 const productImage = Array.isArray(product.images) ? product.images[0] : product.image
 

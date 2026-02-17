@@ -138,7 +138,7 @@ export default function HomePage() {
 
             <AnimateOnScroll delay={100}>
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {products.map((product) => (
+              {products.filter((p) => !p.hidden).map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow p-0 relative">
                   <Badge variant="secondary" className="absolute top-4 left-4 z-10">
                     {product.scop}
