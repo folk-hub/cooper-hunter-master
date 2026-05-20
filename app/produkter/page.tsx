@@ -8,26 +8,9 @@ import { Badge } from "@/components/ui/badge"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { siteContent } from "@/content"
+import { downloadProductSheet } from "@/lib/download-product-sheet"
 
 export default function ProductsPage() {
-  const handleDownload = (productId: string) => {
-    const link = document.createElement("a")
-    let pdfPath = ""
-    let fileName = ""
-
-    if (productId === "arctic-18" || productId === "arctic-24" || productId === "arctic") {
-      pdfPath = "/produktark/arctic-produktark.pdf"
-      fileName = "Cooper&Hunter Arctic-produktark.pdf"
-    } else {
-      pdfPath = `/produktark/${productId}-produktark.pdf`
-      fileName = `Cooper&Hunter ${productId.charAt(0).toUpperCase() + productId.slice(1)}-produktark.pdf`
-    }
-
-    link.href = pdfPath
-    link.download = fileName
-    link.click()
-  }
-
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
@@ -61,6 +44,7 @@ export default function ProductsPage() {
                           alt={product.name}
                           fill
                           sizes="(min-width: 1280px) 40vw, (min-width: 768px) 50vw, 100vw"
+                          priority={index === 0}
                           className="object-cover"
                         />
                       </div>
@@ -109,11 +93,11 @@ export default function ProductsPage() {
                           </Link>
                         </Button>
 
-                        {(product.id === "arctic" || product.id === "daytona" || product.id === "arctic-18" || product.id === "arctic-24" || product.id === "supreme" || product.id === "supreme-12") && (
+                        {product.detailPage.downloadUrl && (
                           <Button
                             size="lg"
                             className="bg-blue-900 hover:bg-blue-700 text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                            onClick={() => handleDownload(product.id)}
+                            onClick={() => downloadProductSheet(product)}
                           >
                             <Download className="mr-2 h-5 w-5" />
                             Last ned produktark

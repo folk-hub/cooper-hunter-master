@@ -11,6 +11,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { ProductCarousel } from "@/components/product-carousel"
 import { getProductById } from "@/content"
 import { comfortCopy, performanceCopy, savingsCtaCopy } from "@/content/brandStory"
+import { downloadProductSheet } from "@/lib/download-product-sheet"
 
 const iconMap = {
   ThermometerSnowflake,
@@ -36,12 +37,7 @@ export default function DaytonaPage() {
   ]
   const ambientLabels = ["Hytta", "Stuen", "Soverommet", "Treningsrommet", "Hytta"]
 
-  const handleDownload = () => {
-    const link = document.createElement("a")
-    link.href = "/produktark/daytona-produktark.pdf"
-    link.download = "Cooper&Hunter Daytona-produktark.pdf"
-    link.click()
-  }
+  const handleDownload = () => downloadProductSheet(product)
 
   return (
     <div className="flex min-h-screen flex-col">

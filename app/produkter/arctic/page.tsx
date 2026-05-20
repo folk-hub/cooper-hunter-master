@@ -11,6 +11,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { ProductCarousel } from "@/components/product-carousel"
 import { getProductById } from "@/content"
 import { comfortCopy, performanceCopy, savingsCtaCopy } from "@/content/brandStory"
+import { downloadProductSheet } from "@/lib/download-product-sheet"
 
 export default function ArcticPage() {
   const product = getProductById("arctic")
@@ -20,12 +21,7 @@ export default function ArcticPage() {
   const ambientImages = ["/images/arctic-vinter.webp", "/images/arctic-kontor-sommer.webp", "/images/arctic-treningsrom.webp"]
   const ambientLabels = ["Soverommet", "Hjemmekontoret", "Treningsrommet"]
 
-  const handleDownload = () => {
-    const link = document.createElement("a")
-    link.href = "/produktark/arctic-produktark.pdf"
-    link.download = "Cooper&Hunter Arctic-produktark.pdf"
-    link.click()
-  }
+  const handleDownload = () => downloadProductSheet(product)
 
   return (
     <div className="flex min-h-screen flex-col">
