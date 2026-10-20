@@ -10,6 +10,7 @@ import { ProductCarousel } from "@/components/product-carousel"
 import { RoomCarousel } from "@/components/room-carousel"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { siteContent } from "@/content"
+import { showPrices } from "@/content/site"
 
 export default function HomePage() {
   const { homepage, products } = siteContent
@@ -181,7 +182,8 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
-                    <p className="mt-4 text-lg font-semibold">{product.price}</p>
+                    {/* Pris: styres av showPrices i content/site.ts */}
+                    {showPrices && <p className="mt-4 text-lg font-semibold">{product.price}</p>}
                   </CardContent>
                   <CardFooter className="pb-6">
                     <Button asChild className="w-full bg-blue-900 hover:bg-blue-700">

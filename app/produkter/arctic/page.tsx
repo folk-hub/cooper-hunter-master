@@ -10,6 +10,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ProductCarousel } from "@/components/product-carousel"
 import { getProductById } from "@/content"
+import { showPrices } from "@/content/site"
 import { comfortCopy, performanceCopy, savingsCtaCopy } from "@/content/brandStory"
 import { downloadProductSheet } from "@/lib/download-product-sheet"
 
@@ -126,12 +127,15 @@ export default function ArcticPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="text-primary-foreground bg-blue-900">
-                  <CardContent className="pt-0">
-                    <p className="text-2xl font-bold mb-2">{product.price}</p>
-                    <p className="text-sm opacity-90">{detailPage.priceNote}</p>
-                  </CardContent>
-                </Card>
+                {/* Prisboks: styres av showPrices i content/site.ts */}
+                {showPrices && (
+                  <Card className="text-primary-foreground bg-blue-900">
+                    <CardContent className="pt-0">
+                      <p className="text-2xl font-bold mb-2">{product.price}</p>
+                      <p className="text-sm opacity-90">{detailPage.priceNote}</p>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
             </div>
           </div>

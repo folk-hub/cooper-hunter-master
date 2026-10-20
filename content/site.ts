@@ -3,6 +3,12 @@
 
 import type { Navigation, Footer } from "./types"
 
+// PRISER: vis eller skjul prisene på hele nettsiden.
+// false = prisene er skjult (den blå prisboksen på produktsidene og prisen på forsiden).
+// true  = prisene vises igjen.
+// Selve prisene og fotnoten ligger fortsatt i products.ts og kan endres der.
+export const showPrices = false
+
 export const navigation: Navigation = {
   menuItems: [
     { label: "Produkter", href: "/produkter" },
