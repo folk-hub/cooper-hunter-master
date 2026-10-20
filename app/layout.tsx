@@ -5,18 +5,13 @@ import { Suspense } from "react"
 import Script from "next/script"
 import "./globals.css"
 
-import { Roboto, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
-
-// Initialize fonts
-const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-roboto",
-})
+// Fonter: Roboto ligger nå i prosjektet (via @fontsource/roboto) i stedet for å hentes
+// fra Google Fonts under bygging. Det gjør at byggingen på Netlify ikke er avhengig av Google.
+// Vektene under er de samme som før: 300, 400, 500 og 700.
+import "@fontsource/roboto/300.css"
+import "@fontsource/roboto/400.css"
+import "@fontsource/roboto/500.css"
+import "@fontsource/roboto/700.css"
 
 export const metadata: Metadata = {
   title: "Cooper&Hunter Varmepumper | Varmepumpeservice AS",
@@ -56,7 +51,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className={`${roboto.variable} font-sans`}>
+      <body className="font-sans">
         {/* Google Tag Manager (noscript) (production only) */}
         {isProduction && (
           <noscript>
